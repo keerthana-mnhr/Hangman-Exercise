@@ -11,7 +11,7 @@ predefined_hangman_words = [
 
 def hangman():
     selected_word = random.choice(predefined_hangman_words)
-    
+    print(selected_word)
     word_length = len(selected_word)
     number_of_remaining_attempts= word_length 
     print( f'Guess the letters in the word!!! Its a {word_length} letter word'  )
@@ -34,13 +34,13 @@ def hangman():
         
              
 
-        print(f'Guessed Word: {' '.join(user_guessed_letters)}')  
+        print(f'{' '.join(user_guessed_letters)}')  
 
         if hyphen not in user_guessed_letters:
            print('You guessed the correct word' )
            break
     else:
-         print('Game Over you Lost, Number of attempt to guess the word was over')
+         print('Game Over !!! You Lost, Number of attempt to guess the word is over')
     continue_playing = input('Do you want to continue playing ? \n(y/n): ').lower() 
     if continue_playing == 'y':
         hangman()      
